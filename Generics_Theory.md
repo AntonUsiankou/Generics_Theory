@@ -106,7 +106,7 @@ Generics_Theory
    <T> void make1 (Gen <T> gen) {…}
    <T> void make2 (Info<T> info1, Info<? extends T> info2) {…}
 
-10)Дан код:
+**10)**Дан код:
 class Info {
 public <T1> Info() { … }
 public <T2> Info(T2 t2) { … }
@@ -117,15 +117,17 @@ public <T3> void make2() { … }
 1.	конструктором без аргументов,
 2.	конструктором с аргументом.
 3.	Синтаксически правильно вызовите методы make1() и make2().
-      Ответ:
-      Конструктор без аргументов
+
+**Ответ:**
+Конструктор без аргументов
       Info info = new <Integer> Info();
-2.     Конструктор с аргументом
-Info info = new Info (new Integer(5));
-3.     Вызов методов
-                    	info.make1(new Integer());
-                    	info.<Integer>make2();
-Источник: “JAVA. Методы программирования” И. Н. Блинов, В. С. Романчик. 2013г.
+Конструктор с аргументом
+      Info info = new Info (new Integer(5));
+Вызов методов
+      info.make1(new Integer());
+      info.<Integer>make2();
+
+**Источник:** “JAVA. Методы программирования” И. Н. Блинов, В. С. Романчик. 2013г.
 Глава 3, стр. 73.
 
 
